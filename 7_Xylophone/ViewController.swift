@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         for (i, note) in notesArray.enumerated() {
             let button = UIButton(type: .system)
             button.setTitle(note, for: .normal)
+            button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 30)
+            button.setTitleColor(.white, for: .normal)
             button.backgroundColor = UIColor(named: note) ?? .gray
             xylophoneStackView.addArrangedSubview(button)
             button.addAction(UIAction { _ in self.playSound(button)}, for: .touchUpInside)
